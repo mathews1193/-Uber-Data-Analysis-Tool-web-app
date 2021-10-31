@@ -1,13 +1,29 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+import datetime
 
 def home(request):
-    return HttpResponse(
-         "<h1> Uber Data Analysis! </h1>")
+     return render(
+        request,
+        'hello/Home.html',
+        {
+            
+        }
+    )
 
 def dashboard (request):
-    return HttpResponse(
-         "<h1>Dashboard </h1>")
+     return render(
+        request,
+        'hello/Dashboard.html',
+        {
 
+        }
+    )
 def aboutus(request):
-    return HttpResponse(
-         "<h1> About US </h1>")
+    return render(
+        request,
+        'hello/Aboutus.html',
+        {
+            'date': datetime.datetime.now()
+        }
+    )
