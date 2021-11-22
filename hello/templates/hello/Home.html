@@ -1,11 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="{% static '/hello/Home.css' %}">
         <title>Home</title>
-        <h1>Uber Data Analysis!</h1>
+        <div class="title">
+            <h1>Uber Data Analysis Tool</h1>
+        </div>
     </head>
     <body>
-        <strong>Hello there!</strong> 
+        <img class="home-pic" src="{% static '/images/uber-logo.jpg' %}" alt="logo" width="800" height="500"/>
+        <div class="home-infor">
+            <h3>A data system that analyzes different operations performed by Uber systems everyday.</h3>
+            <h3>Company systems can look at this platform as a way to visualize and improve understanding of results that would help them cast a new strategy to attract more users</h3> 
+        </div>
     </body>
+    <h3></h3>
 </html>
