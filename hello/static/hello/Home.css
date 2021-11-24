@@ -29,3 +29,21 @@ img.home-pic {
    
   box-shadow: 0px 5px rgba(0,0,0,0.2);
 }
+
+form button {
+  width:20%;
+  margin: 10px auto;
+  color:whitesmoke;
+  font-size:17px;
+  font-weight:600;
+  background-color:#333;
+  border-radius: 20%;
+  padding:20px 5px;
+}
+
+.footer {
+  background-color: #313131;
+  text-align: center;
+  border: 2px solid whitesmoke;
+  color:white;
+}

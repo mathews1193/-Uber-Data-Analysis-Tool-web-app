@@ -1,0 +1,10 @@
+body {
+    background-color: powderblue;
+}
+
+.title h1 {
+  background-color: #313131;
+  text-align: center;
+  border: 2px solid whitesmoke;
+  color:white;
+}

@@ -1,11 +1,33 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="Dashboard.css">
+        <link rel="stylesheet" href="{% static '/hello/Dashboard.css' %}">
         <title>Dashboard</title>
-        <h1>Dashboard</h1>
+        <div class="title">
+            <h1>Dashboard</h1>
+        </div>
     </head>
     <body>
         <strong>Hello there,!</strong>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Origin Taz</th>
+                <th>Destination_taz	</th>
+                <th>Pickup_datetime</th>
+                <th>Trip_distance</th>
+                <th>Trip_duration</th>
+            </tr>
+            <tr>
+                <td>{{ head.id}}</td>
+                <td>{{ head.origin_taz }}</td>
+                <td>{{ head.destination_taz }}</td>
+                <td>{{ head.pickup_datetime }}</td>
+                <td>{{ head.trip_distance }}</td>
+                <td>{{ head.trip_duration }}</td>
+            </tr>
+        </table>
+        
 </html>
