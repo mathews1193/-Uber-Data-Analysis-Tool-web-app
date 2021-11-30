@@ -10,24 +10,80 @@
         </div>
     </head>
     <body>
-        <strong>Hello there,!</strong>
-        <table>
+        <h1>Welcome!</h1>
+        
+        <h3>Total Numbers</h3>
+        <table border = "1" cellpadding = "7" cellspacing = "6">
+        <tr>
+            <th>Duration (min)</th>
+            <th>Trip Distance</th>
+            <th>Trip Mph Avg</th>
+            <th>Est Revenue</th>
+        </tr>
             <tr>
-                <th>ID</th>
-                <th>Origin Taz</th>
-                <th>Destination_taz	</th>
-                <th>Pickup_datetime</th>
-                <th>Trip_distance</th>
-                <th>Trip_duration</th>
-            </tr>
-            <tr>
-                <td>{{ head.id}}</td>
-                <td>{{ head.origin_taz }}</td>
-                <td>{{ head.destination_taz }}</td>
-                <td>{{ head.pickup_datetime }}</td>
-                <td>{{ head.trip_distance }}</td>
-                <td>{{ head.trip_duration }}</td>
+                <td>{{ stats.duration_min.count  }}</td>
+                <td>{{ stats.trip_distance.count  }}</td>
+                <td>{{ stats.trip_mph_avg.count  }}</td>
+                <td>$ {{ stats.est_revenue.count  }}</td>
             </tr>
         </table>
+        
+    <h2>Below is an example of the tool retriveing data from a Uber dataset. </h2>
+        <div class="table">
+            <table border = "1" cellpadding = "7" cellspacing = "6">
+                <tr>
+                    <th>ID</th>
+                    <th>Pick-Up</th>
+                    <th>Destination</th>
+                    <th>Pickup Date / Time</th>
+                    <th>Trip Distance</th>
+                    <th>Trip Duration</th>
+                </tr>
+                {% for i in data %}
+                <tr>
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.origin_taz }}</td>
+                    <td>{{ i.destination_taz }}</td>
+                    <td>{{ i.pickup_datetime }}</td>
+                    <td>{{ i.trip_distance }}</td>
+                    <td>{{ i.trip_duration }}</td>
+
+                    
+                </tr>
+                {% endfor %}
+            </table>
+
+            <div class="table">
+            <table border = "1" cellpadding = "7" cellspacing = "6">
+                <tr>
+                    <th>ID</th>
+                    <th>Pick-Up</th>
+                    <th>Destination</th>
+                    <th>Trip Distance</th>
+                    <th>Trip Duration</th>
+                    <th>PU Date</th>
+                    <th>Year</th>
+                    <th>Month</th>
+                    <th>Day</th>
+                    <th>Hour</th>
+                </tr>
+                {% for i in data2 %}
+                <tr>
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.origin_taz }}</td>
+                    <td>{{ i.destination_taz }}</td>
+                    <td>{{ i.trip_distance }}</td>
+                    <td>{{ i.trip_duration }}</td>
+                    <td>{{ i.pu_date_hour }}</td>
+                    <td>{{ i.year }}</td>
+                    <td>{{ i.month }}</td>
+                    <td>{{ i.day }}</td>
+                    <td>{{ i.hour }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+             <img src="{% static tripsPerDay %}" />
+        </div>
+        
         
 </html>
