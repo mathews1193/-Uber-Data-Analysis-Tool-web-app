@@ -8,3 +8,12 @@ body {
   border: 2px solid whitesmoke;
   color:white;
 }
+h2.head {
+  margin: 0 auto;
+}
+table.total {
+  margin: 0 auto;
+}
+img.graph {
+  margin: 0 auto;
+}
